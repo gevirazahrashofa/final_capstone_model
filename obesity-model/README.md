@@ -10,30 +10,25 @@ Dataset yang digunakan berisi data tentang kebiasaan hidup dan kondisi fisik ind
 
 Dataset mencakup atribut berikut:
 
-1. **Fitur Demografis dan Fisik**:
-   - `Age`: Usia dalam tahun
-   - `Gender`: Jenis kelamin (Male/Female)
-   - `Height`: Tinggi badan dalam meter
-   - `Weight`: Berat badan dalam kilogram
-   - `family_history_with_overweight`: Riwayat keluarga dengan kelebihan berat badan (yes/no)
-
-2. **Kebiasaan Makan**:
-   - `FAVC`: Konsumsi makanan tinggi kalori (yes/no)
-   - `FCVC`: Frekuensi konsumsi sayuran
-   - `NCP`: Jumlah makanan utama per hari
-   - `CAEC`: Konsumsi makanan antara waktu makan (Sometimes/Frequently/Always/no)
-   - `CH2O`: Konsumsi air per hari
-   - `CALC`: Konsumsi alkohol (Sometimes/Frequently/Always/no)
-
-3. **Aktivitas Fisik dan Gaya Hidup**:
-   - `SCC`: Menghitung kalori yang dikonsumsi (yes/no)
-   - `FAF`: Frekuensi aktivitas fisik
-   - `TUE`: Waktu penggunaan perangkat teknologi
-   - `SMOKE`: Status merokok (yes/no)
-   - `MTRANS`: Transportasi utama yang digunakan
-
-4. **Target**:
-   - `NObeyesdad`: Tingkat obesitas (7 kelas)
+| **Kategori**         | **Nama Fitur (Kolom)**           | **Deskripsi**                                         | **Tipe Data** | **Cara Input / Keterangan**                                                    |
+| -------------------- | -------------------------------- | ----------------------------------------------------- | ------------- | ------------------------------------------------------------------------------ |
+| **Data Fisik**       | `Age`                            | Usia dalam tahun                                      | Integer       | Input langsung                                                                 |
+|                      | `Gender`                         | Jenis kelamin                                         | String        | Pilihan: `Male`, `Female`                                                      |
+|                      | `Height`                         | Tinggi badan dalam meter                              | Float         | Bisa diukur sendiri                                                            |
+|                      | `Weight`                         | Berat badan dalam kilogram                            | Float         | Bisa ditimbang sendiri                                                         |
+| **Riwayat Keluarga** | `family_history_with_overweight` | Riwayat keluarga dengan kelebihan berat badan         | String        | Pilihan: `yes`, `no`                                                           |
+| **Kebiasaan Makan**  | `FAVC`                           | Konsumsi makanan berkalori tinggi                     | String        | Sering mengonsumsi? Pilihan: `yes`, `no`                                       |
+|                      | `FCVC`                           | Frekuensi konsumsi sayuran                            | Float         | Skala 1 (jarang) - 3 (sering)                                                  |
+|                      | `NCP`                            | Jumlah makan utama per hari                           | Float         | Antara 1 - 4 kali                                                              |
+|                      | `CAEC`                           | Konsumsi makanan di antara jam makan                  | String        | Pilihan: `no`, `Sometimes`, `Frequently`, `Always`                             |
+|                      | `CH2O`                           | Konsumsi air putih per hari (liter)                   | Float         | Antara 1 - 3 liter                                                             |
+| **Gaya Hidup**       | `SMOKE`                          | Status merokok                                        | String        | Pilihan: `yes`, `no`                                                           |
+|                      | `SCC`                            | Memantau konsumsi kalori                              | String        | Pilihan: `yes`, `no`                                                           |
+|                      | `FAF`                            | Frekuensi aktivitas fisik per minggu                  | Float         | Antara 0 - 3 kali                                                              |
+|                      | `TUE`                            | Waktu penggunaan teknologi (komputer/gadget) per hari | Float         | Antara 0 - 2 jam                                                               |
+|                      | `CALC`                           | Konsumsi alkohol                                      | String        | Pilihan: `no`, `Sometimes`, `Frequently`, `Always`                             |
+|                      | `MTRANS`                         | Moda transportasi                                     | String        | Pilihan: `Automobile`, `Bike`, `Motorbike`, `Public_Transportation`, `Walking` |
+| **Target**           | `NObeyesdad`                     | Tingkat obesitas                                      | String        | 7 kategori (Contoh: `Insufficient_Weight`, `Normal_Weight`, dst.)              |
 
 ## Alur Kerja
 
